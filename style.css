@@ -1,0 +1,187 @@
+h1, h2, .logo {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #0a1f44;
+}
+
+/* Navbar */
+header {
+  background: #0a1f44;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fdd835;
+  height: 50px; /* Adjust as needed */
+  width: auto;
+  display: block;
+}
+
+.logo img {
+  max-height: 48px;
+  max-width: 48px;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fdd835;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.section h2 {
+  color: #0a1f44;
+}
+
+.section ul li {
+  margin: 10px 0;
+}
+
+.home-logo img {
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Section content alignment */
+.section h1,
+.section h2 {
+  text-align: center;
+}
+
+.section p,
+.section ul {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Facebook */
+.social-links {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-divider {
+  border: none;
+  height: 2px;
+  background-color: #0a1f44; /* Navy blue */
+  margin: 10px auto;
+  width: 60%; /* Adjust width as needed */
+}
+
+/* Footer */
+footer {
+  background: #0a1f44;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact-logo {
+  max-width: 100px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0a1f44;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo img {
+    max-height: 40px;
+  }
+}
