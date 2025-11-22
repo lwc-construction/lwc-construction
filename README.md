@@ -1,1 +1,4 @@
-Website for LWC Construction, Inc.
+<p align="center"><h1>LWC Construction, Inc.</h1></p>
+We specialize in underground utility construction; including, but not limited to horizontal directional drilling (boring), trenching, locating and mapping for fiber optic, CATV, telecommunications, water, sewer and gas. We are HPDE Fusion Certified and licensed for Boring & Tunneling (BT2)/Water & Sewer Lines (WL2) by the South Carolina Department of Labor Licensing and Regulation (LLR). Our service area includes Conway, Florence, Georgetown, Kingstree, Marion, Myrtle Beach, Socastee, Surfside and all portions of Georgetown, Florence, Horry, Marion, and Williamsburg Counties. We have directional boring equipment capable of performing 2 - 14 inch diameter bores over a span of 1000 feet. 
+<p>
+<p align="center"><img width="192" height="128" alt="lwc-logo-white-background" src="https://github.com/user-attachments/assets/59d687a9-8bef-4b57-b609-49b7aedb7e3e" /> </p>
