@@ -1,3 +1,5 @@
+/* All screens ... see bottom for small screen responsive settings */
+
 /* Reset */
 * {
   margin: 0;
@@ -99,15 +101,19 @@ header {
   display: block;
 }
 
-.contact-logo {
-  max-width: 100px;
+.v24x40-road img {
+  max-width: 100%;
+  height: auto;
   margin: 10px auto;
   display: block;
 }
 
-.v24x40-road img {
-  max-width: 512px;
-  margin: 10x auto;
+/* Note that no "img" option is used for this class because index.html uses inline
+class for the img src element. This is completely different from the above .home-logo
+and .v24x40-road classes!*/
+.contact-logo {
+  max-width: 100px;
+  margin: 10px auto;
   display: block;
 }
 
@@ -158,6 +164,7 @@ footer {
 }
 
 /* Responsive */
+/* These settings take effect for all screens smaller than 768px */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -179,10 +186,6 @@ footer {
 
   .hamburger {
     display: block;
-  }
-
-  .v24x40-road img {
-    max-width: 256px;
   }
 
 }
