@@ -108,6 +108,11 @@ header {
   display: block;
 }
 
+.v20x22-walk img {
+  max-width: 80%;
+  height: auto;
+}
+
 /* Note that no "img" option is used for this class because index.html uses inline
 class for the img src element. This is completely different from the above .home-logo
 and .v24x40-road classes!*/
@@ -126,7 +131,7 @@ and .v24x40-road classes!*/
 .section p,
 .section ul {
   text-align: left;
-  max-width: 800px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
