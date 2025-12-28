@@ -49,7 +49,7 @@
     <div class="v24x40-road">
       <img src="images/24x40_road_768.png" alt="Vermeer D24x40 Series II">
     </div>
-    <p>With 37 years of experience, we provide reliable, safe underground utility solutions using advanced drilling techniques. We specialize in horizontal directional drilling for utility construction; including fiber, CATV, telecommunications, gas, water and sewer. Our service area includes Conway, Florence, Georgetown, Kingstree, Marion, Myrtle Beach, Socastee, Surfside and all portions of Georgetown, Florence, Horry, Marion, and Williamsburg Counties. We have directional boring equipment capable of performing 2 - 14 inch diameter bores over a span of 1000 feet. Our fleet includes a Vermeer Navigator D20x22 Series II and D24x40 Series II with all necessary support equipment. Customer satisfaction is our goal; ensuring your job will be completed in a proper and timely manner. Our clients include Berkeley County Water and Sewer Authority, City of Conway, Farmers Telephone Cooperative, Georgetown County Water and Sewer District, Grand Strand Water and Sewer Authority, Horry Electric Cooperative, Mastec Utilities, and Monks Corner Water Works.</p>
+    <p>With 37 years of experience, we provide reliable, safe underground utility solutions using advanced drilling techniques. We specialize in horizontal directional drilling for utility construction; including fiber, CATV, telecommunications, gas, water and sewer. Our service area includes Conway, Florence, Georgetown, Kingstree, Marion, Myrtle Beach, Socastee, Surfside and all portions of Georgetown, Florence, Horry, Marion, and Williamsburg Counties. We have directional boring equipment capable of performing 2 - 14 inch diameter bores over a span of 1000 feet. Our fleet includes a Vermeer Navigator D20x22 Series II and D24x40 Series II with all necessary support equipment. Customer satisfaction is our goal; ensuring your job will be completed in a proper and timely manner. Our clients include Berkeley County Water and Sewer Authority, City of Conway, Farmers Telephone Cooperative, Georgetown County Water and Sewer District, Grand Strand Water and Sewer Authority, Horry Electric Cooperative, Mastec Utilities, Moncks Corner Water Works and Myrtle Beach International Airport.</p>
     <br>
     <div class="v20x22-walk">
       <img src="images/20x22_walk.png" alt="Vermeer D20x22 Series II">
@@ -58,7 +58,8 @@
   </section>
 
   <section id="services" class="section">
-    <h2>Our Services</h2>
+  <h2>Our Services</h2>
+  <div class="services-content">
     <ul>
       <li>Horizontal Directional Drilling</li>
       <li>Project Consultation & Planning</li>
@@ -66,6 +67,13 @@
       <li>Subsurface Utility Engineering (Location and GPS Mapping)</li>
       <li>Electrical/Fiber/Gas/Sewer/Telecomm/Water Line Installation</li>
     </ul>
+    <div class="slideshow">
+      <img src="images/jerry_cox.png" alt="Horizontal Directional Drilling">
+      <img src="images/20x22_rail.png" alt="D20x22 Navigator and Bobcat 335">
+      <img src="images/2_1000_gal.png" alt="(2) 1000 gallon mixing systems">
+      <img src="images/6_sdr_11.png" alt="6 in. SDR 11 for Myrtle Beach International Airport">
+    </div>
+  </div>
   </section>
 
   <section id="contact" class="section">
@@ -92,19 +100,49 @@
   </footer>
 
   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+
+    /* ------------------------------
+      Hamburger menu (toggle, close on click)
+    ------------------------------ */
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links a');
-    // Toggle menu
+
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-    // Close menu on link click
+
     links.forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
     });
+
+    /* ------------------------------
+      Slideshow (fade, loop once)
+    ------------------------------ */
+    const slides = document.querySelectorAll(".slideshow img");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    showSlide(current);
+
+    const interval = setInterval(() => {
+      current++;
+      if (current < slides.length) {
+        showSlide(current);
+      } else {
+        clearInterval(interval);
+      }
+    }, 20000);
+
+  });
   </script>
 
 </body>

@@ -1,4 +1,4 @@
-/* All screens ... see bottom for small screen responsive settings */
+/* All screens ... see @media for small screen responsive settings */
 
 /* Reset */
 * {
@@ -122,17 +122,56 @@ and .v24x40-road classes!*/
   display: block;
 }
 
-/* Section content alignment */
+/* Section header alignment */
 .section h1,
 .section h2 {
   text-align: center;
 }
 
+/* Section paragraph and unordered list alignment and width */
 .section p,
 .section ul {
   text-align: left;
   max-width: 768px;
   margin: 0 auto;
+}
+
+/* Services section layout */
+.services-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px auto;
+  max-width: 768px;
+  padding: 0 20px;
+}
+
+/* Slideshow container */
+.slideshow {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  flex-shrink: 0;  /* Prevent flex from shrinking the slideshow */
+}
+
+/* Slideshow images */
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
 }
 
 /* Facebook */
@@ -191,6 +230,25 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  /* Stack services unordered list and slideshow vertically on small screens */
+  .services-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideshow {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;  /* Keep aspect ratio on mobile */
+    flex-shrink: 0;
+  }
+
+  /* Slideshow images 100% on small screens*/
+  .slideshow img {
+    width: 100%;
+    height: 100%;
   }
 
 }
