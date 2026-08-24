@@ -185,12 +185,54 @@ and .v24x40-road classes!*/
   padding: 0 20px;
 }
 .contact-video {
-  position: relative;
   width: 480px;
   max-width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  flex-shrink: 0;  /* Prevent flex from shrinking the slideshow */
+  margin: 0 auto;
+}
+
+.facebook-video-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 320px;
+  padding: 24px;
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(10,31,68,0.92), rgba(22,72,136,0.82)),
+    url("images/lwc-logo-small.png") center/cover no-repeat;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(10,31,68,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facebook-video-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(10,31,68,0.22);
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  border: 2px solid rgba(255,255,255,0.5);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.video-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 /* Facebook */
